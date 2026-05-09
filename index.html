@@ -7,6 +7,8 @@
 
   <!-- css externo -->
   <link rel="stylesheet" href="index.css">
+  <!-- Cargo iconify (alternativa a fontawesome) -->
+  <script src="https://code.iconify.design/iconify-icon/2.3.0/iconify-icon.min.js"></script>
 </head>
 
 <body class="landing-mode">
@@ -19,10 +21,10 @@
   <!-- NAV -->
   <nav>
     <ul>
-      <li><a href="#inicio">Inicio</a></li>
-      <li><a href="#productos">Productos</a></li>
-      <li><a href="#reseñas">Reseñas</a></li>
-      <li><a href="#contacto">Contacto</a></li>
+      <li><a href="#inicio"><iconify-icon icon="line-md:home-twotone"></iconify-icon> Inicio</a></li>
+      <li><a href="#productos"><iconify-icon icon="si:book-duotone"></iconify-icon> Productos</a></li>
+      <li><a href="#reseñas"><iconify-icon icon="line-md:chat-twotone"></iconify-icon> Reseñas</a></li>
+      <li><a href="#contacto"><iconify-icon icon="line-md:email-alt-twotone"></iconify-icon> Contacto</a></li>
     </ul>
   </nav>
 
@@ -31,20 +33,33 @@
 
     <!-- LANDING -->
     <section id="landing">
-        <h2>Bienvenido a la Tienda de Libros</h2>
 
+        <h2>Bienvenido a la Tienda de Libros</h2>
         <p>
             Descubre historias increíbles, aventuras y mundos mágicos.
         </p>
 
-        <a href="#inicio" class="landing-btn">
-            Entrar a la tienda
-        </a>
+        <!-- contenedor -->
+        <div class="landing-visual">
+            <!-- imagen landing -->
+            <img 
+                src="./assets/open.png" 
+                alt="Libros decorativos"
+                class="landing-image"
+            >
+
+            <!-- boton de tienda -->
+            <a href="#inicio" class="landing-btn">
+                <iconify-icon icon="streamline-ultimate:shop-sign-open-bold"></iconify-icon>
+                Entrar a la tienda
+            </a>
+        </div>
+
     </section>
 
     <!-- INICIO -->
     <section id="inicio">
-      <h2>Inicio</h2>
+      <h2><iconify-icon icon="solar:book-bold-duotone"></iconify-icon> Inicio</h2>
       <p>
         Bienvenido a nuestra página web. Aquí puedes encontrar información
         sobre nuestros productos, reseñas y formas de contacto.
@@ -53,7 +68,7 @@
 
     <!-- PRODUCTOS -->
     <section id="productos">
-      <h2>Productos</h2>
+      <h2><iconify-icon icon="solar:book-bold-duotone"></iconify-icon> Productos</h2>
       <p>
         Aquí iría la información de tus productos o servicios.
       </p>
@@ -61,7 +76,7 @@
 
     <!-- RESEÑAS -->
     <section id="reseñas">
-      <h2>Reseñas</h2>
+      <h2><iconify-icon icon="solar:book-bold-duotone"></iconify-icon> Reseñas</h2>
       <p>
         Esta sección puede mostrar opiniones de clientes y testimonios.
       </p>
@@ -69,7 +84,7 @@
 
     <!-- CONTACTO -->
     <section id="contacto">
-      <h2>Contacto</h2>
+      <h2><iconify-icon icon="solar:book-bold-duotone"></iconify-icon> Contacto</h2>
       <p>
         Puedes agregar un formulario, redes sociales o información de contacto.
       </p>
@@ -82,7 +97,10 @@
     <p>&copy; 2026 Mi proyecto de tienda - Todos los derechos reservados.</p>
   </footer>
 
-<!-- js externo -->
-<script src="index.js"></script>
+
+
+  <!-- js externo -->
+  <script src="index.js"></script>
+
 </body>
 </html>

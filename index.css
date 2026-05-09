@@ -1,157 +1,342 @@
+    /* -----------------------
+    IMPORTAR FUENTES DE GOOGLE
+    -------------------------- */
+        @import url('https://fonts.googleapis.com/css2?family=Croissant+One&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+    
 
     /* -----------------------
-       RESET BÁSICO
+    VARIABLES
+   -------------------------- */
+    :root {
+        /* PALETA */
+        --orange: #DB712E;
+        --light-blue: #A7C7C8;
+        --dark-brown: #6D220F;
+        --cream: #EAC393;
+        --gold: #E4A853;
+        --brick: #B75432;
+        --light-cream: #E2D2BD;
+        --wine: #7A260E;
+
+        /* COLORES GENERALES */
+        --bg: var(--light-cream);
+        --text: var(--dark-brown);
+
+        --header-bg: var(--wine);
+        --header-text: var(--light-cream);
+
+        --nav-bg: var(--dark-brown);
+        --nav-hover: var(--brick);
+
+        --section-bg: #fffaf4;
+
+        --button-bg: var(--orange);
+        --button-hover: var(--brick);
+
+        --shadow: rgba(109, 34, 15, 0.15);
+
+        /* FUENTES */
+        --title-font: 'Croissant One', serif;
+        --body-font: 'Roboto', sans-serif;
+    }
+
+
+    /* -----------------------
+    RESET BÁSICO
     -------------------------- */
     * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
     }
 
-    body {
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      background: #f4f4f4;
-      color: #333;
-    }
 
     /* -----------------------
-       HEADER
+    BODY
+    -------------------------- */
+    body {
+        font-family: var(--body-font);
+        line-height: 1.6;
+        background: var(--bg);
+        color: var(--text);
+    }
+
+
+    /* -----------------------
+    TIPOGRAFÍA
+    -------------------------- */
+    h1,
+    h2,
+    h3,
+    h4 {
+        font-family: var(--title-font);
+    }
+
+
+    /* -----------------------
+    HEADER
     -------------------------- */
     header {
-      background: #222;
-      color: white;
-      padding: 1.5rem;
-      text-align: center;
+        /* imagen de fondo */
+        background-image:
+            linear-gradient(
+            rgba(122, 38, 14, 0.45),
+            rgba(109, 34, 15, 0.55)
+            ),
+            url("./assets/banner.jpg");
+
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        color: var(--header-text);
+        padding: 5rem 1.5rem;
+        text-align: center;
+        border-bottom: 4px solid var(--wine);
     }
 
     header h1 {
-      margin-bottom: 0.5rem;
+        margin-bottom: 0.5rem;
+        font-size: 3rem;
+        text-shadow: 2px 2px 10px rgba(0,0,0,0.4);
     }
 
+    header p {
+        font-size: 1.2rem;
+        text-shadow: 1px 1px 6px rgba(0,0,0,0.4);
+    }
+
+
     /* -----------------------
-       NAV
+    NAV
     -------------------------- */
     nav {
-      background: #444;
+        background: var(--nav-bg);
+        position: sticky;
+        top: 0;
+        z-index: 100;
     }
 
     nav ul {
-      list-style: none;
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
     }
 
     nav li {
-      margin: 0;
+        margin: 0;
     }
 
     nav a {
-      display: block;
-      padding: 1rem 1.5rem;
-      color: white;
-      text-decoration: none;
-      transition: background 0.3s;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 1rem 1.5rem;
+        color: var(--light-cream);
+        text-decoration: none;
+        transition: 0.3s;
     }
 
     nav a:hover {
-      background: #666;
+        background: var(--nav-hover);
     }
+
 
     /* -----------------------
-       MAIN
+    ICONOS
     -------------------------- */
-    main {
-      max-width: 1200px;
-      margin: auto;
-      padding: 2rem;
+    iconify-icon {
+        font-size: 1.2rem;
+        vertical-align: middle;
     }
 
+
+    /* -----------------------
+    MAIN
+    -------------------------- */
+    main {
+        max-width: 1200px;
+        margin: auto;
+        padding: 2rem;
+    }
+
+
+    /* -----------------------
+    SECTIONS
+    -------------------------- */
     section {
-      background: white;
-      padding: 2rem;
-      margin-bottom: 2rem;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        display: none;
+        background: var(--section-bg);
+        padding: 2rem;
+        margin-bottom: 2rem;
+        border-radius: 16px;
+        box-shadow: 0 4px 12px var(--shadow);
+        border: 2px solid rgba(109, 34, 15, 0.08);
+    }
+
+    section.active {
+        display: block;
     }
 
     section h2 {
-      margin-bottom: 1rem;
-      color: #222;
+        margin-bottom: 1rem;
+        color: var(--wine);
     }
 
-    /* Ocultar todas las secciones */
-    section {
-    display: none;
-    }
 
-    /* Mostrar la sección activa */
-    section.active {
-    display: block;
-    }
-
-    /* LANDING */
-    /* ocultar elementos en landing */
+    /* -----------------------
+    LANDING
+    -------------------------- */
+    /* ocultar layout en landing */
     body.landing-mode header,
     body.landing-mode nav,
     body.landing-mode footer {
-    display: none;
+        display: none;
     }
 
+    /* landing */
     #landing {
-    text-align: center;
-    padding: 5rem 2rem;
+        min-height: 100vh;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        background:
+            linear-gradient(
+            rgba(122, 38, 14, 0.65),
+            rgba(109, 34, 15, 0.8)
+            ),
+            var(--gold);
+
+        color: var(--light-cream);
+        border-radius: 0;
+        box-shadow: none;
     }
 
+    /* cuando está activo */
+    #landing.active {
+        display: flex;
+    }
+
+    #landing h2 {
+        color: var(--light-cream);
+        font-size: 3rem;
+        margin-bottom: 1rem;
+    }
+
+    #landing p {
+        max-width: 600px;
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
+    }
+
+    /* contenedor visual */
+    .landing-visual {
+        position: relative;
+        width: 100%;
+        max-width: 500px;
+    }
+
+    /* imagen landing */
+    .landing-image {
+        width: 100%;
+        height: auto;
+        display: block;
+        object-fit: contain;
+        border-radius: 20px;
+        filter: drop-shadow(0 10px 20px rgba(0,0,0,0.35));
+    }
+
+    /* botón landing */
     .landing-btn {
-    display: inline-block;
-    margin-top: 2rem;
-    padding: 1rem 2rem;
-
-    background: black;
-    color: white;
-    text-decoration: none;
-
-    border-radius: 10px;
-
-    transition: 0.3s;
+        position: absolute;
+        left: 50%;
+        bottom: 30%;
+        transform: translateX(-50%);
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 1rem 2rem;
+        background: rgba(219, 113, 46, 0.95);
+        color: white;
+        text-decoration: none;
+        border-radius: 12px;
+        font-weight: bold;
+        backdrop-filter: blur(5px);
+        transition: 0.3s;
     }
 
     .landing-btn:hover {
-    background: #444;
+        background: var(--brick);
+        transform: translateX(-50%) scale(1.05);
     }
 
+
     /* -----------------------
-       FOOTER
+    FOOTER
     -------------------------- */
     footer {
-      background: #222;
-      color: white;
-      text-align: center;
-      padding: 1.5rem;
-      margin-top: 2rem;
+        background: var(--header-bg);
+        color: var(--header-text);
+        text-align: center;
+        padding: 1.5rem;
+        border-top: 4px solid var(--gold);
     }
 
+
     /* -----------------------
-       RESPONSIVE
+    RESPONSIVE
     -------------------------- */
     @media (max-width: 768px) {
-      nav ul {
-        flex-direction: column;
-      }
 
-      nav a {
-        text-align: center;
-        border-top: 1px solid rgba(255,255,255,0.1);
-      }
+        nav ul {
+            flex-direction: column;
+        }
 
-      main {
-        padding: 1rem;
-      }
+        nav a {
+            justify-content: center;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
 
-      section {
-        padding: 1.5rem;
-      }
+        main {
+            padding: 1rem;
+        }
+
+        section {
+            padding: 1.5rem;
+        }
+
+        #landing {
+            justify-content: flex-start;
+            padding-top: 2rem;
+            padding-bottom: 2rem;
+            min-height: auto;
+        }
+
+        #landing h2 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        #landing p {
+            font-size: 1rem;
+            margin-bottom: 1rem;
+            padding-inline: 1rem;
+        }
+
+        /* imagen */
+        .landing-visual {
+            max-width: 320px;
+            margin-top: 0;
+        }
+
+        /* botón */
+        .landing-btn {
+            padding: 0.8rem 1.2rem;
+            font-size: 0.9rem;
+            bottom: 20%;
+        }
     }
  
