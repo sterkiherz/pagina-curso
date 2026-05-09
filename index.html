@@ -59,42 +59,292 @@
 
     <!-- INICIO -->
     <section id="inicio">
-      <h2><iconify-icon icon="solar:book-bold-duotone"></iconify-icon> Inicio</h2>
-      <p>
-        Bienvenido a nuestra página web. Aquí puedes encontrar información
-        sobre nuestros productos, reseñas y formas de contacto.
-      </p>
+        <h2>
+            <iconify-icon icon="solar:book-bold-duotone"></iconify-icon>
+            Inicio
+        </h2>
+        <p class="intro-text">
+            Bienvenido a nuestra pequeña librería digital, un espacio pensado para
+            lectores curiosos, amantes de la fantasía y exploradores de nuevas historias.
+        </p>
+        <!-- contenido destacado -->
+        <div class="home-content">
+            <!-- bloque -->
+            <article class="home-card">
+                <iconify-icon 
+                    icon="solar:book-2-bold-duotone"
+                    class="home-icon"
+                ></iconify-icon>
+                <h3>Libros seleccionados</h3>
+                <p>
+                    Descubre novelas, cuentos y aventuras cuidadosamente elegidas
+                    para todos los gustos.
+                </p>
+            </article>
+
+            <!-- bloque -->
+            <article class="home-card">
+                <iconify-icon 
+                    icon="solar:users-group-rounded-bold-duotone"
+                    class="home-icon"
+                ></iconify-icon>
+                <h3>Comunidad lectora</h3>
+                <p>
+                    Comparte opiniones, encuentra recomendaciones y explora reseñas
+                    de otros lectores.
+                </p>
+
+            </article>
+
+            <!-- bloque -->
+            <article class="home-card">
+                <iconify-icon 
+                    icon="solar:chat-round-like-bold-duotone"
+                    class="home-icon"
+                ></iconify-icon>
+                <h3>Atención personalizada</h3>
+                <p>
+                    ¿Necesitas ayuda para elegir tu próxima lectura?
+                    Estamos aquí para ayudarte.
+                </p>
+            </article>
+        </div>
+
     </section>
 
+    
     <!-- PRODUCTOS -->
     <section id="productos">
-      <h2><iconify-icon icon="solar:book-bold-duotone"></iconify-icon> Productos</h2>
-      <p>
-        Aquí iría la información de tus productos o servicios.
-      </p>
+        <h2>
+            <iconify-icon icon="solar:book-bold-duotone"></iconify-icon>
+            Productos
+        </h2>
+        <p>
+            Explora algunos de nuestros libros más populares.
+        </p>
+
+        <!-- contenedor cards -->
+        <div class="products-container">
+            <!-- card -->
+            <article class="product-card">
+                <img 
+                    src="./assets/reinos.jpg" 
+                    alt="Libro de fantasía"
+                    class="product-image"
+                >
+                <h3>Reinos Perdidos</h3>
+                <p>
+                    Una aventura épica llena de magia, dragones y secretos antiguos.
+                </p>
+                <span class="product-price">$24.99</span>
+                <button class="product-btn">
+                    <iconify-icon icon="solar:cart-large-bold-duotone"></iconify-icon>
+                    Comprar
+                </button>
+            </article>
+
+
+            <!-- card -->
+            <article class="product-card">
+                <img 
+                    src="./assets/libreria.jpg" 
+                    alt="Libro misterioso"
+                    class="product-image"
+                >
+                <h3>La Biblioteca Oculta</h3>
+                <p>
+                    Un misterio encantador entre libros prohibidos y pasajes secretos.
+                </p>
+                <span class="product-price">$19.99</span>
+                <button class="product-btn">
+                    <iconify-icon icon="solar:cart-large-bold-duotone"></iconify-icon>
+                    Comprar
+                </button>
+            </article>
+
+
+            <!-- card -->
+            <article class="product-card">
+                <img 
+                    src="./assets/lluvia.jpg" 
+                    alt="Libro romántico"
+                    class="product-image"
+                >
+                <h3>Cartas Bajo la Lluvia</h3>
+                <p>
+                    Una historia romántica cálida y melancólica en una ciudad costera.
+                </p>
+                <span class="product-price">$17.99</span>
+                <button class="product-btn">
+                    <iconify-icon icon="solar:cart-large-bold-duotone"></iconify-icon>
+                    Comprar
+                </button>
+            </article>
+        </div>
+
     </section>
+
 
     <!-- RESEÑAS -->
     <section id="reseñas">
-      <h2><iconify-icon icon="solar:book-bold-duotone"></iconify-icon> Reseñas</h2>
-      <p>
-        Esta sección puede mostrar opiniones de clientes y testimonios.
-      </p>
+        <h2>
+            <iconify-icon icon="solar:book-bold-duotone"></iconify-icon>
+            Reseñas
+        </h2>
+        <p>
+            Lo que nuestros lectores opinan sobre la tienda y nuestros libros.
+        </p>
+
+        <!-- grid -->
+        <div class="reviews-grid">
+            <!-- reseña -->
+            <article class="review-card">
+                <div class="review-stars">
+                    ★★★★★
+                </div>
+                <p class="review-text">
+                    “Una librería mágica. La ambientación y la selección de libros
+                    son increíbles.”
+                </p>
+                <div class="review-user">
+                    <img 
+                        src="./assets/user1.jpg"
+                        alt="Usuario"
+                        class="review-avatar"
+                    >
+                    <div>
+                        <h3>Lucía Fernández</h3>
+                        <span>Lectora frecuente</span>
+                    </div>
+                </div>
+            </article>
+
+
+            <!-- reseña -->
+            <article class="review-card">
+                <div class="review-stars">
+                    ★★★★★
+                </div>
+                <p class="review-text">
+                    “Encontré novelas que llevaba años buscando. El diseño de la
+                    tienda es precioso.”
+                </p>
+                <div class="review-user">
+                    <img 
+                        src="./assets/user2.jpg"
+                        alt="Usuario"
+                        class="review-avatar"
+                    >
+                    <div>
+                        <h3>Martín Gómez</h3>
+                        <span>Fan de fantasía</span>
+                    </div>
+                </div>
+            </article>
+
+
+            <!-- reseña -->
+            <article class="review-card">
+                <div class="review-stars">
+                    ★★★★★
+                </div>
+                <p class="review-text">
+                    “La mejor experiencia para amantes de los libros cozy y mágicos.”
+                </p>
+                <div class="review-user">
+                    <img 
+                        src="./assets/user3.jpg"
+                        alt="Usuario"
+                        class="review-avatar"
+                    >
+                    <div>
+                        <h3>Sofía Alvarez</h3>
+                        <span>Cliente habitual</span>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+
     </section>
 
     <!-- CONTACTO -->
     <section id="contacto">
-      <h2><iconify-icon icon="solar:book-bold-duotone"></iconify-icon> Contacto</h2>
-      <p>
-        Puedes agregar un formulario, redes sociales o información de contacto.
-      </p>
+        <h2>
+            <iconify-icon icon="solar:book-bold-duotone"></iconify-icon>
+            Contacto
+        </h2>
+        <p>
+            ¿Tienes preguntas, recomendaciones o quieres hablar sobre libros?
+            ¡Envíanos un mensaje!
+        </p>
+
+        <form 
+            action="https://formspree.io/f/xeenpoyr"
+            method="POST"
+            class="contact-form"
+        >
+            <!-- nombre -->
+            <div class="form-group">
+
+                <label for="nombre">
+                    <iconify-icon icon="solar:user-bold-duotone"></iconify-icon>
+                    Nombre
+                </label>
+
+                <input
+                    type="text"
+                    id="nombre"
+                    name="nombre"
+                    placeholder="Tu nombre"
+                    required
+                >
+            </div>
+
+            <!-- correo -->
+            <div class="form-group">
+                <label for="email">
+                    <iconify-icon icon="solar:letter-bold-duotone"></iconify-icon>
+                    Correo electrónico
+                </label>
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="tu@email.com"
+                    required
+                >
+            </div>
+
+            <!-- mensaje -->
+            <div class="form-group">
+                <label for="mensaje">
+                    <iconify-icon icon="solar:chat-round-bold-duotone"></iconify-icon>
+                    Mensaje
+                </label>
+                <textarea
+                    id="mensaje"
+                    name="mensaje"
+                    rows="6"
+                    placeholder="Escribe tu mensaje aquí..."
+                    required
+                ></textarea>
+            </div>
+
+            <!-- botón -->
+            <button type="submit" class="submit-btn">
+                <iconify-icon icon="ion:send"></iconify-icon>
+                Enviar mensaje
+            </button>
+        </form>
+
     </section>
 
   </main>
 
   <!-- FOOTER -->
   <footer>
-    <p>&copy; 2026 Mi proyecto de tienda - Todos los derechos reservados.</p>
+    <p>&copy; 2026 Salina Cinthia - Todos los derechos reservados.</p>
   </footer>
 
 

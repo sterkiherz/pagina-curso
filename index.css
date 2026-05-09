@@ -186,6 +186,306 @@
 
 
     /* -----------------------
+    INICIO
+    -------------------------- */
+    .intro-text {
+        margin-top: 1rem;
+        max-width: 700px;
+        line-height: 1.8;
+    }
+
+    /* contenedor */
+    .home-content {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+        margin-top: 2rem;
+    }
+
+    /* cards */
+    .home-card {
+        flex: 1 1 250px;
+        background: rgba(255,255,255,0.9);
+        padding: 2rem;
+        border-radius: 20px;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+        transition: 0.3s;
+    }
+
+    .home-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+    }
+
+    /* iconos */
+    .home-icon {
+        font-size: 3rem;
+        color: var(--orange);
+        margin-bottom: 1rem;
+    }
+
+    /* títulos */
+    .home-card h3 {
+        margin-bottom: 0.8rem;
+        color: var(--wine);
+    }
+
+    
+    /* -----------------------
+    FORMULARIO CONTACTO
+    -------------------------- */
+
+    .contact-form {
+        width: 100%;
+        max-width: 700px;
+        margin: 2rem auto 0;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    /* grupo */
+    .form-group {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+    }
+
+    /* labels */
+    .form-group label {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        margin-bottom: 0.7rem;
+        font-weight: bold;
+        color: var(--wine);
+        font-size: 1rem;
+    }
+
+    /* inputs + textarea */
+    .form-group input,
+    .form-group textarea {
+        width: 100%;
+        padding: 1rem;
+        border: 2px solid rgba(109, 34, 15, 0.15);
+        border-radius: 14px;
+        background: rgba(255,255,255,0.9);
+        color: var(--text);
+        font-family: var(--body-font);
+        font-size: 1rem;
+        transition: 0.3s;
+        resize: vertical;
+    }
+
+    /* placeholder */
+    .form-group input::placeholder,
+    .form-group textarea::placeholder {
+
+        color: rgba(109, 34, 15, 0.45);
+    }
+
+    /* focus */
+    .form-group input:focus,
+    .form-group textarea:focus {
+        outline: none;
+        border-color: var(--orange);
+        box-shadow: 0 0 0 4px rgba(219, 113, 46, 0.15);
+        background: white;
+    }
+
+    /* textarea */
+    .form-group textarea {
+        min-height: 180px;
+    }
+
+    /* botón enviar */
+    .submit-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.6rem;
+        width: fit-content;
+        padding: 1rem 2rem;
+        border: none;
+        border-radius: 14px; 
+        background: var(--orange);
+        color: white;
+        font-family: var(--body-font);
+        font-size: 1rem;
+        font-weight: bold;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+
+    /* hover */
+    .submit-btn:hover {
+        background: var(--brick);
+        transform: translateY(-3px);
+        box-shadow: 0 8px 20px rgba(109, 34, 15, 0.2);
+    }
+
+    /* active */
+    .submit-btn:active {
+        transform: scale(0.98);
+    }
+
+
+    /* -----------------------
+    PRODUCTOS
+    -------------------------- */
+    .products-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+        margin-top: 2rem;
+        justify-content: center;
+    }
+
+    /* card */
+    .product-card {
+        flex: 1 1 300px;
+        max-width: 350px;
+        background: rgba(255,255,255,0.9);
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        transition: 0.3s;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .product-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+    }
+
+    /* imagen */
+    .product-image {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+    }
+
+    /* contenido */
+    .product-card h3 {
+        padding: 1rem 1rem 0.5rem;
+        color: var(--wine);
+    }
+
+    .product-card p {
+        padding: 0 1rem;
+        flex-grow: 1;
+    }
+
+    /* precio */
+    .product-price {
+        padding: 1rem;
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: var(--orange);
+    }
+
+    /* botón */
+    .product-btn {
+        margin: 0 1rem 1rem;
+        padding: 1rem;
+        border: none;
+        border-radius: 12px;
+        background: var(--orange);
+        color: white;
+        font-weight: bold;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5rem;
+        transition: 0.3s;
+    }
+
+    .product-btn:hover {
+        background: var(--brick);
+    }
+
+
+    /* -----------------------
+    RESEÑAS
+    -------------------------- */
+
+    .reviews-grid {
+        display: grid;
+        grid-template-columns: repeat(
+            auto-fit,
+            minmax(280px, 1fr)
+        );
+        gap: 2rem;
+        margin-top: 2rem;
+    }
+
+    /* card */
+    .review-card {
+        background: rgba(255,255,255,0.9);
+        border-radius: 20px;
+        padding: 2rem;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+        transition: 0.3s;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .review-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+    }
+
+
+    /* estrellas */
+    .review-stars {
+        color: var(--gold);
+        font-size: 1.3rem;
+        letter-spacing: 3px;
+    }
+
+    /* texto */
+    .review-text {
+        font-style: italic;
+        line-height: 1.8;
+    }
+
+    /* usuario */
+    .review-user {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-top: auto;
+    }
+
+    /* avatar */
+    .review-avatar {
+
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 3px solid var(--orange);
+    }
+
+    /* nombre */
+    .review-user h3 {
+        margin-bottom: 0.2rem;
+        color: var(--wine);
+        font-size: 1rem;
+    }
+
+    /* rol */
+    .review-user span {
+        font-size: 0.9rem;
+        opacity: 0.7;
+    }
+
+
+    /* -----------------------
     LANDING
     -------------------------- */
     /* ocultar layout en landing */
@@ -340,3 +640,18 @@
         }
     }
  
+    /* formulario responsive */
+    @media (max-width: 768px) {
+        .contact-form {
+            gap: 1rem;
+        }
+        .form-group input,
+        .form-group textarea {
+            padding: 0.9rem;
+        }
+
+        .submit-btn {
+            width: 100%;
+            justify-content: center;
+        }
+    }
