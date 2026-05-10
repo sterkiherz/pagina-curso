@@ -57,7 +57,13 @@
     body {
         font-family: var(--body-font);
         line-height: 1.6;
-        background: var(--bg);
+        /* Color de fondo */
+        background-color: var(--bg);
+        /* imagen transparente */
+        background-image: url("assets/books_bg.png");
+        background-repeat: repeat; 
+        background-size: cover; 
+        background-position: center;
         color: var(--text);
     }
 
